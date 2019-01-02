@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class ReverseWords{
+
+ public static String reverseWords(String str){
+     //write your code here...
+     String[] line = str.split(" ");
+     String reverseLine = "";
+     for (int i = line.length - 1; i >= 0; i--) {
+       if (i == 0) {
+         reverseLine += line[0];
+       } else {
+         reverseLine += (line[i] + " ");
+       }
+     }
+     
+     return reverseLine;
+ }
+}
