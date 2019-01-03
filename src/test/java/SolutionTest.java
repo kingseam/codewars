@@ -25,7 +25,8 @@ public class SolutionTest {
             hkd.ReverseWords.class,
             jhkim.ReverseWords.class,
             suhyeon.ReverseWords.class,
-            angmagun.ReverseWords.class
+            angmagun.ReverseWords.class,
+            huntak.ReverseWords.class
         };
         List<ReverseWordsImpl> clazzList = new ArrayList<>();
         ReverseWordsImpl impl = null;

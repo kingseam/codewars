@@ -1,9 +1,9 @@
-package suhyeon;
+package huntak;
 
 import comm.ReverseWordsImpl;
 
 public class ReverseWords implements ReverseWordsImpl {
-	public static String reverseWords(String str){
+	public String reverseWords(String str){
 		String[] splitStr = str.split(" ");
     	String answer = splitStr[0];
     	
