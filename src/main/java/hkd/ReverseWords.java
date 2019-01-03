@@ -1,5 +1,9 @@
-public class ReverseWords {
-	public static String reverseWords(String str){
+package hkd;
+
+import comm.ReverseWordsImpl;
+
+public class ReverseWords implements ReverseWordsImpl {
+	public String reverseWords(String str){
 		//write your code here...
 		String arr[] = str.split(" ");
 		String result = "";
@@ -7,7 +11,6 @@ public class ReverseWords {
 			result += arr[i] + " ";
 		}
 		result += arr[0];
-		System.out.println(result);
 		return result;
 	 }
 }

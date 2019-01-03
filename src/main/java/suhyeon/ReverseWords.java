@@ -1,9 +1,9 @@
-import java.io.*;
-import java.util.*;
+package suhyeon;
 
-public class ReverseWords{
+import comm.ReverseWordsImpl;
 
- public static String reverseWords(String str){
+public class ReverseWords implements ReverseWordsImpl {
+ public String reverseWords(String str){
      //write your code here...
      String[] line = str.split(" ");
      String reverseLine = "";
