@@ -1,5 +1,3 @@
-package codewars.Moves_in_squared_strings;
-
 import java.util.Arrays;
 import java.util.StringJoiner;
 import java.util.function.Function;
