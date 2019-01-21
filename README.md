@@ -9,3 +9,5 @@
 본인 패키지를 만들어서 각자 구현 필요. PR시 리뷰 이후 머지 예정.
 
 2주차 온라인 문제 : https://www.codewars.com/kata/consecutive-strings/train/java
+
+3주차 온라인 문제 : https://www.codewars.com/kata/buying-a-car/train/java
