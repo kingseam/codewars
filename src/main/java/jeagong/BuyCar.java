@@ -1,4 +1,4 @@
-package codewars.Buying_a_car;
+package jeagong;
 
 public class BuyCar {
 
