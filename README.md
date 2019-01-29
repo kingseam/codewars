@@ -11,3 +11,5 @@
 2주차 온라인 문제 : https://www.codewars.com/kata/consecutive-strings/train/java
 
 3주차 온라인 문제 : https://www.codewars.com/kata/buying-a-car/train/java
+
+4주차 온라인 문제 : https://www.codewars.com/kata/statistics-for-an-athletic-association/train/java
