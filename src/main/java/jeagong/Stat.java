@@ -5,12 +5,22 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 public class Stat {
+	static SimpleDateFormat formatter = new SimpleDateFormat("HH|mm|ss");
 
-	public static String stat(String strg){
+	public static String stat(String strg) {
 		// your code
-		SimpleDateFormat formatter = new SimpleDateFormat("HH|mm|ss");
+		long[] array = formatterDate(strg);
+		int len = array.length;
 
-		long[] longArray = Stream.of(strg.split(", ")).mapToLong(i -> {
+		String avg = calAvg(array);
+		String range = calRange(array, len);
+		String median = calMedian(array, len);
+
+		return new StringBuilder().append("Range: ").append(range).append(" Average: ").append(avg).append(" Median: ").append(median).toString();
+	}
+
+	public static long[] formatterDate(String str) {
+		long[] array = Stream.of(str.split(", ")).mapToLong(i -> {
 			try {
 				return formatter.parse(i).getTime();
 			} catch (ParseException e) {
@@ -18,25 +28,26 @@ public class Stat {
 			}
 			return 0;
 		}).toArray();
-		Arrays.sort(longArray);
-		
-		int len = longArray.length;
+		Arrays.sort(array);
+		return array;
+	}
+
+	public static String calAvg(long[] array) {
+		return formatter.format(LongStream.of(array).average().getAsDouble());
+	}
+
+	public static String calRange(long[] array, int len) {
 		long standard = 0;
 		try {
 			standard = formatter.parse("00|00|00").getTime();
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		
-		String avg = formatter.format(LongStream.of(longArray).average().getAsDouble());
-		
-		String range = formatter.format(longArray[len - 1] < 0 ? longArray[len - 1] - longArray[0] + standard
-				: longArray[len - 1] - longArray[0]);
-		String median = formatter
-				.format(len % 2 == 0 ? (longArray[len / 2] + longArray[len / 2 - 1]) / 2 : longArray[len / 2]);
+		return formatter.format(array[len - 1] < 0 ? array[len - 1] - array[0] + standard
+				: array[len - 1] - array[0]);
+	}
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("Range: ").append(range).append(" Average: ").append(avg).append(" Median: ").append(median);
-		return sb.toString();
+	public static String calMedian(long[] array, int len) {
+		return formatter.format(len % 2 == 0 ? (array[len / 2] + array[len / 2 - 1]) / 2 : array[len / 2]);
 	}
 }
