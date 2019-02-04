@@ -2,19 +2,19 @@ import java.util.*;
 import java.text.*;
 public class Stat {
   static SimpleDateFormat sdf = new SimpleDateFormat("HH|mm|ss");            
-	public static String stat(String strg) {
-    String[] seperatedStrArr = seperateString(strg);
+    public static String stat(String strg) {
+      String[] seperatedStrArr = seperateString(strg);
+      
+      List<Long> arrLong = stringToList(seperatedStrArr);
+      Collections.sort(arrLong);
     
-    List<Long> arrLong = stringToList(seperatedStrArr);
-    Collections.sort(arrLong);
+      String range = calcRange(arrLong);
+      String average = calcAverage(arrLong);
+      String median = calcMedian(arrLong);
     
-    String range = calcRange(arrLong);
-    String average = calcAverage(arrLong);
-    String median = calcMedian(arrLong);
-    
-    StringBuffer sb = new StringBuffer("Range: ").append(range).append(" Average: ").append(average).append(" Median: ").append(median);
-    return String.valueOf(sb);
-	}
+      StringBuffer sb = new StringBuffer("Range: ").append(range).append(" Average: ").append(average).append(" Median: ").append(median);
+      return String.valueOf(sb);
+    }
   
   public static String calcRange(List<Long> arrLong){
     long range;
@@ -55,8 +55,7 @@ public class Stat {
   }
   
   public static List<Long> stringToList(String[] seperatedStrArr){
-    List<Long> arrLong = new ArrayList<Long>();
-    
+    List<Long> arrLong = new ArrayList<Long>();    
     try{
       Date date;      
       for(String seperatedStr : seperatedStrArr){
