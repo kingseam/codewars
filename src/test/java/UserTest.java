@@ -1,4 +1,5 @@
 
+import angmagun.User;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

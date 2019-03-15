@@ -1,3 +1,4 @@
+import angmagun.PerfectPower;
 import java.util.Random;
 import org.junit.Test;
 import static java.lang.Math.log;

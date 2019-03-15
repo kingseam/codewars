@@ -1,3 +1,5 @@
+package angmagun;
+
 public class User {
     public int rank = -8;
     public int progress = 0;
