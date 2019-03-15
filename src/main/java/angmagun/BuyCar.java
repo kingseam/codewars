@@ -20,6 +20,8 @@ public class BuyCar {
             count++;
         }
 
+
+
         return new int[]{count, (int)Math.round((TempStartPriceOld + cash) - TempStartPriceNew)};
     }
 }

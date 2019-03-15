@@ -1,8 +1,8 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import hoho.Opstrings;
 import org.junit.jupiter.api.Test;
 
-import angmagun.*;
 
 public class OpstringsTest {
 

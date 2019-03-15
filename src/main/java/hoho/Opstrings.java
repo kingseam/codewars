@@ -1,10 +1,13 @@
+package hoho;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
-class Opstrings {
+public class Opstrings {
     
     public static String vertMirror (String strng) {
         // your code
         String[] splitedStrArr = strng.split("\n");
-        String resultStr = "";
+        List<String> resultStr = new ArrayList<>();
         
         char[] charArr;
         String temp;
@@ -12,13 +15,12 @@ class Opstrings {
           temp ="";
           charArr = splitedStr.toCharArray();
           for(int i=charArr.length-1; i>=0; i--){   //문자열 reverse
-            temp += Character.toString(charArr[i]);
+            temp += String.valueOf(charArr[i]);
           }          
-          resultStr = resultStr + temp + "\n";
+          resultStr.add(temp);
         }
-        
-        resultStr = resultStr.substring(0, resultStr.length()-1);   //마지막 '\n'제거
-        return resultStr;
+
+        return String.join("\n", resultStr);
     }
     public static String horMirror (String strng) {
         // your code

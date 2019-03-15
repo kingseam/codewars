@@ -20,6 +20,15 @@ public class SolutionTest {
         }
     }
 
+    public static void main(String... a) throws Exception{
+        while(true) {
+            int aa = System.in.read();
+            System.out.print((char)aa);
+            System.out.println();
+            if(aa==45) break;
+        }
+    }
+
     public List<ReverseWordsImpl> init() {
         Class<?>[] classList = {
             hkd.ReverseWords.class,
