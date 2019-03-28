@@ -15,3 +15,5 @@
 4주차 온라인 문제 : https://www.codewars.com/kata/statistics-for-an-athletic-association/train/java
 
 5주차 온라인 문제 : https://www.codewars.com/kata/51fda2d95d6efda45e00004e
+
+6주차 온라인 문제 : https://www.codewars.com/kata/5abeaf0fee5c575ff20000e4/train/java
