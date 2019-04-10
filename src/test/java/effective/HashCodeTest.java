@@ -1,10 +1,11 @@
 package effective;
 
-import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Optional;
 
 @Slf4j
 public class HashCodeTest {

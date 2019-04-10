@@ -1,3 +1,4 @@
+package jhkim;
 import java.util.Arrays;
 
 public class Stat {

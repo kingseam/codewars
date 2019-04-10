@@ -1,3 +1,5 @@
+package hoho;
+
 import java.util.*;
 import java.text.*;
 public class Stat {

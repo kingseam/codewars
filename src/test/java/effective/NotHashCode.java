@@ -15,7 +15,7 @@ public class NotHashCode {
         this.one = one;
         this.two = two;
         this.three = three;
-        log.info("hashcode={}",this.hashCode());
+        log.info("aa={}",this.hashCode());
     }
 
     @Override

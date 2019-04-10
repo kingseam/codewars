@@ -1,6 +1,13 @@
 package angmagun;
 
-public class PerfectPower {
+public class PerfectPower implements Comparable{
+
+    @Override
+    public int compareTo(Object o) {
+
+        return 0;
+    }
+
     public static int[] isPerfectPower(int n) {
 
        for(int i=2; i<=n/2; i++){

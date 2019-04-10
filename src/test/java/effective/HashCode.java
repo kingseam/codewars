@@ -1,23 +1,24 @@
 package effective;
 
+import lombok.Builder;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Assert;
-import org.junit.Test;
 
 @Slf4j
+@ToString
 public class HashCode implements Cloneable{
     private final boolean zero;
     private final int one;
     private final long two;
     private final float three;
 
+    @Builder
     public HashCode(boolean zero, int one, long two, float three){
-        log.info(this.getClass().getName());
+
         this.zero = zero;
         this.one = one;
         this.two = two;
         this.three = three;
-        log.info("hashcode={}",this.hashCode());
     }
 
     @Override
