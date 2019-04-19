@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 @Slf4j
 public class Stack<E> {
-    private E[] elements;
+    private Object[] elements;
     private int size = 0;
     private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
@@ -21,7 +21,7 @@ public class Stack<E> {
 
     public E pop() {
         if(size == 0) throw new RuntimeException("stack is empty");
-        E result = elements[--size];
+        E result = (E)elements[--size];
         elements[size] = null;
         return result;
     }
@@ -46,7 +46,7 @@ public class Stack<E> {
         /* 제너릭 배열을 선언하게 되면 배열은 공변의 성질을 가지기 때문에 타입안정성을 해칠수 있음.
          * 프로그래머가 접근이 불가능하게 하거나 List<E>로 선언하는것이 타입안정성을 지킬수있다.
          */
-        //stack.elements = new String[]{"1","2","3"};
+        stack.elements = new Integer[]{1,2,3,4};
 
         while(!stack.isEmpty()){
             log.info("stack={}",stack.pop());
