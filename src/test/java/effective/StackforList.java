@@ -58,5 +58,14 @@ public class StackforList<E> {
         while(!stack.isEmpty()){
             log.info("stack={}",stack.pop());
         }
+
+        StackforList<Object> stack2 = new StackforList<>();
+        stack2.push(new Object());
+        stack2.push(1);
+        stack2.push(false);
+
+        while(!stack2.isEmpty()){
+            log.info("stack={}",stack2.pop());
+        }
     }
 }
