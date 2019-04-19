@@ -47,6 +47,13 @@ public enum StringToEnum {
         log.info("{}", StringToEnum.fromString("+"));
         log.info("{}", StringToEnum.fromString("*"));
 
+        StringBuilder str = new StringBuilder("abc");
+        str.append("def", 0, 3);
+        log.info("{}", str);
+
+        StringBuilder str2 = new StringBuilder("abc");
+        str2.append("def", 1, 2);
+        log.info("{}", str2);
     }
 }
 
